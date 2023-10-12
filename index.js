@@ -12,3 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const listItem = document.createElement('div');
             listItem.classList.add('pokemon-item');
+            const image = document.createElement('img');
+            image.src = imageUrl;
+            image.alt = name;
+            image.classList.add('pokemon-image');
+
+            const nameHeading = document.createElement('h2');
+            nameHeading.textContent = name;
