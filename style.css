@@ -30,3 +30,19 @@ h1 {
     background-color: #0073E6;
     margin-top: 50px;
 }
+.pokemon-item {
+    width: 23%; /* Adjust the width to fit 4 items in a row */
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add some spacing between rows */
+}
+
+.pokemon-image {
+    width: 150px;
+    height: 170px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
