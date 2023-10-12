@@ -3,3 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
 });
+    // Function to fetch and display Pokémon details
+    async function fetchAndDisplayPokemonDetails(name) {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+            const data = await response.json();
+            const imageUrl = data.sprites.front_default;
+
+            const listItem = document.createElement('div');
+            listItem.classList.add('pokemon-item');
