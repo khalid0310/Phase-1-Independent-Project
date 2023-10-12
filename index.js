@@ -19,3 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const nameHeading = document.createElement('h2');
             nameHeading.textContent = name;
+        }}
+        const detailsElement = document.createElement('div');
+        detailsElement.classList.add('pokemon-details');
+        detailsElement.style.display = 'none'; // Initially hidden
+        detailsElement.innerHTML = `
+            <p>Type: ${data.types[0].type.name}</p>
+            <p>Height: ${data.height / 10} m</p>
+            <p>Weight: ${data.weight / 10} kg</p>
+        `;
+
+        image.addEventListener('click', function () {
+            if (detailsElement.style.display === 'block') {
+                detailsElement.style.display = 'none';
+            } else {
+                detailsElement.style.display = 'block';
+            }
+        });
+        
