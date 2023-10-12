@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const nameHeading = document.createElement('h2');
             nameHeading.textContent = name;
-        }}
+        
         const detailsElement = document.createElement('div');
         detailsElement.classList.add('pokemon-details');
         detailsElement.style.display = 'none'; // Initially hidden
@@ -36,4 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 detailsElement.style.display = 'block';
             }
         });
-        
+        listItem.appendChild(image);
+        listItem.appendChild(nameHeading);
+        listItem.appendChild(detailsElement);
+
+        // Insert the new Pokémon item at the top of the list
+        pokemonList.insertBefore(listItem, pokemonList.firstChild);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
