@@ -24,3 +24,9 @@ h1 {
     margin-top: 50px;
     border-radius: 20px;
 }
+#search-button {
+    padding: 12px 20px; /* Increase padding to make the button bigger */
+    font-size: 10px; /* Increase font size */
+    background-color: #0073E6;
+    margin-top: 50px;
+}
